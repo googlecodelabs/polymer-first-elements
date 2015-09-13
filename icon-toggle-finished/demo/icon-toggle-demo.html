@@ -7,6 +7,9 @@
   <template>
     <style>
       :host {
+        --icon-toggle-color: lightgrey;
+        --icon-toggle-outline-color: black;
+        --icon-toggle-pressed-color: red;        
         font-family: sans-serif;
       };
     </style>
@@ -18,10 +21,7 @@
     
     <h3>Data-bound icon-toggle</h3>
 
-    <!-- use a computed binding to generate the message -->
     <div><span>[[message(isFav)]]</span></div>
-
-    <!-- curly brackets ({{}}} allow two-way binding --> 
     <icon-toggle toggle-icon="favorite" pressed="{{isFav}}"></icon-toggle>
   </template>
   
