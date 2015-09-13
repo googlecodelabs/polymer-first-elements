@@ -32,44 +32,19 @@
       pressed: {
         type: Boolean,
         notify: true,
-        observer: '_pressedChanged',
         reflectToAttribute: true,
         value: false
       },
       toggleIcon: {
         type: String
       },
-      label: {
-        type: String,
-        value: "",
-        observer: "_labelChanged"
-      }
     },
     listeners: {
       "tap": "toggle",
-      "keydown": "handleKey"
-    },
-    hostAttributes: {
-      role: "button",
-    },    
-    _pressedChanged: function() {
-      this.setAttribute('aria-pressed', this.pressed ? 'true' : 'false');
-    },
-    _labelChanged: function() {
-      this.setAttribute('aria-label', this.label);
-    },
+    },   
     toggle: function() {
       this.pressed = !this.pressed;
     },
-    handleKey: function(event, detail, sender) {
-      var key = event.key ? event.key.toLowerCase : ''; 
-      if (event.ctrlKey || event.metaKey || event.altKey || event.shiftKey)
-        return;
-      if (key == 'space' || event.keyIdentifier == 'U+0020' || event.keyCode == 32 || event.detail.key == 'space') {
-        this.toggle();
-        event.preventDefault();
-      }
-    }
   });
   </script>
 
