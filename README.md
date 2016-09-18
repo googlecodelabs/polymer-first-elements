@@ -14,7 +14,7 @@ dependencies and to run the demo.
 
 2.  Install `bower` and `polyserve`:
 
-        npm install -g bower polyserve
+        npm install -g bower polymer-cli
 
 3.  Clone this repo:
 
@@ -25,12 +25,12 @@ dependencies and to run the demo.
         cd polymer-first-elements
         bower install
         
-5.  To preview your element, run `polyserve` from the repo directory:
+5.  To preview your element, run `polymer serve` from the repo directory:
 
-        polyserve
+        polymer serve
         
     Open `localhost:8080/components/icon-toggle/demo/` in your browser. (Note that the path uses `icon-toggle`—the 
     component name listed in this element's `bower.json` file—rather than the actual directory name.) 
     
-If you're wondering what `polyserve` does, see [Testing elements with local bower dependencies](https://www.polymer-project.org/1.0/docs/start/reusableelements.html#local-dependencies) 
+If you're wondering what `polymer serve` does, see [Testing elements with local bower dependencies](https://www.polymer-project.org/1.0/docs/start/reusableelements.html#local-dependencies) 
 in the Polymer docs. 
